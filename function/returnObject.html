@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Object</title>
+</head>
+<body>
+    <p id="return1"></p>
+    <p id="return2"></p>
+
+    <p id="type1"></p>
+    <p id="type2"></p>
+
+    <script>
+        const person={
+            name : "bibek",
+            age: 25,
+            college: function() {
+                // this.age is used for initialize the value inside t
+                
+                return this.age + " " + this.name;
+                
+                // return person.age + " " + person.name;
+            }
+        };
+
+        function age() {
+            return "my age is " + person.age
+            // person.age is used for initializing value from person data
+        }
+
+        // This returns the result output
+        document.getElementById('return1').innerHTML= person.college();
+        
+        // This is for external function result output
+        document.getElementById('return2').innerHTML= age();
+
+        // This returns the code format
+        document.getElementById('type1').innerHTML= person.college;
+
+        // This is for external function format
+        document.getElementById('type2').innerHTML= age;
+    </script>
+</body>
+</html>

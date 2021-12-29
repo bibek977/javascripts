@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding String and Numbers</title>
+</head>
+<body>
+    <div id="add1"></div>
+    <div id="add2"></div>
+    <div id="add3"></div>
+
+    <script>
+        // first is string so it takes all as string
+        document.getElementById("add1").innerHTML="23"+2+3;
+
+        // first two is number so it adds the number then with last as string it concatenates
+        document.getElementById("add2").innerHTML=23+2+"3";
+
+        // first 3 are added as numbers then comes string whatever afterwards it concatenates as string
+        document.getElementById("add3").innerHTML=23+2+5+"4"+3+1;
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Write</title>
+</head>
+<body>
+    
+    <button onclick="alert1()">Alert Button</button>
+
+    <p>Sum == 15 + 25 == <i id="sum"></i> </p>
+    <button onclick="sum()">add</button>
+
+    <p>
+        Sum of a and b , <br>
+        where a = 35 and b = 55
+    </p>
+
+   
+
+    <script>
+        // It writes on the given id name sum
+        function sum(){
+            document.getElementById('sum').innerHTML= 15+25 ;
+        }
+       
+        // It writes the data at the end of the document page
+        document.write(35+55)
+        document.write("<br>")
+        document.write(35+59)
+
+        // alert1 is used cause alert is alerady the reserved keyword
+        function alert1() {
+            window.alert("Hello, Mr. Bibek Bhattari");
+        }
+
+        // It writes at the console of the page inspect element
+      console.log(45+43);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Event</title>
+</head>
+<body>
+    <button onclick="document.getElementById('date1').innerHTML=Date()">Time 1</button>
+    <p id="date1"></p>
+
+    <!-- It writes in the given button or initial positon -->
+    <button onclick="this.innerHTML=Date()">Time 2</button>
+
+    <button onclick="late()">Time 3</button>
+    <p id="date2"></p>
+
+    <script>
+        function late() {
+            document.getElementById('date2').innerHTML=Date();
+        }
+    </script>
+</body>
+</html>

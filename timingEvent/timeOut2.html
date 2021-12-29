@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut Event</title>
+</head>
+<body>
+    <button onclick="showAlert = setTimeout(alertFunction,4000)">Alert</button>
+
+    <br>
+    <button onclick="clearTimeout(showAlert)">Cancel Alert</button>
+    <p>It works as you have to cancel before its timing</p>
+
+    <script>
+        function alertFunction(){
+            alert("Hello");
+        }
+    </script>
+</body>
+</html>

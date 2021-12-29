@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaN</title>
+</head>
+<body>
+    <h1>Not A Number</h1>
+    <p id="num"></p>
+    <p id="name"></p>
+
+    <script>
+        let myNum=9810258171
+        myName="Bibek Bhattarai"
+        console.log(myNum)
+        console.log(isNaN(myNum))
+        console.log(myName)
+        console.log(isNaN(myName))
+
+        document.getElementById('num').innerHTML=isNaN(myNum)
+        document.getElementById('name').innerHTML=isNaN(myName)
+
+        if(isNaN(myName)) {
+            console.log("Please Enter a number ")
+            document.getElementById('name').innerHTML="This is not a number so <br> Please Enter a Number :"
+        }
+
+        
+    </script>
+</body>
+</html>

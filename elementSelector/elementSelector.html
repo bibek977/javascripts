@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Selector with JS</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Programming Language</h1>
+        <p id="id1">JavaScript</p>
+
+        <p class="class1">Css</p>
+
+        <p>Html</p>
+
+        <button onclick="change()">Change</button>
+        <h1>Others</h1>
+
+        <p id="id2">You Want to Add</p>
+
+        <p class="class1">Add some</p>
+
+        <div class="radio-btn">
+            <label for="front">Front End </label>
+            <input type="radio" name="developer" id="front">
+            <label for="back">Back End </label>
+            <input type="radio" name="developer" id="back">
+            <label for="full">Full Stack </label>
+            <input type="radio" name="developer" id="full">
+        </div>
+        
+    </div>
+
+    <script>
+        const change = () => {
+            // to check id selector
+            console.log(document.getElementById('id1'));
+            console.log(document.querySelectorAll("#id2"));
+            // to get data inside it
+            console.log(document.getElementById('id1').innerHTML);
+            console.log(document.querySelector("#id2").innerHTML);
+            
+            // to count class selector
+            console.log(document.getElementsByClassName('class1'));
+            console.log(document.querySelectorAll(".class1"));
+            // to get data inside it
+            // chooses the only first match value
+            console.log(document.querySelector(".class1").innerHTML);
+            
+            // to check the tagName selector
+            console.log(document.getElementsByTagName("h1"));
+            console.log(document.querySelectorAll("h1"));
+            // to get data inside it
+            console.log(document.querySelector("h1").innerHTML);
+            
+            // to check the radio input as Name
+            console.log(document.getElementsByName('developer'));
+            
+        }
+
+        </script>
+</body>
+</html>

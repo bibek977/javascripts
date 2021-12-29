@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Selector with JS</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Programming Language</h1>
+        <p id="id1">JavaScript</p>
+
+        <p class="class1">Css</p>
+
+        <p>Html</p>
+
+        <button onclick="change()">Change</button>
+        <h2>Others</h2>
+
+        <p id="id2">You Want to Add</p>
+
+        <p class="class2">Add some 1</p>
+
+        <p class="class2">Add some 2</p>
+        
+    </div>
+
+    <script>
+        const change = () => {
+            // to get id selector
+            document.querySelector('#id2').innerHTML = "React";
+
+            // to get class selector
+            document.querySelector('.class2').innerHTML = "Scss";
+            // It only changes the one class element i.e only first matching value
+
+            // to get the tagName
+            document.querySelector("h2").innerHTML= "Things to Learn";
+
+        }
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script>
+        function hide() {
+            document.getElementById('name').style.display="none";
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="hiding">
+        <p>Hello my name is <i id="name">Bibek Bhattarai</i></p>
+        <button onclick="hide()">Click Me</button>
+    </div>
+    
+    <div class="changing">
+        <p id="location">I live in piluwa</p>
+        <button onclick="change()">Change Address</button>
+    </div>
+
+    <script>
+        function change() {
+            document.getElementById('location').innerHTML="I live in Balkumari.";
+
+            // document.getElementById('location').innerHTML=document.getElementById('location').innerHTML.replace("piluwa","balkumari")
+
+            // you can see in replaceMatch.html for this code
+        }
+    </script>
+
+</body>
+</html>

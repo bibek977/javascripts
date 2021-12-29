@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Query Selector</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: lightblue;
+            box-sizing: border-box;
+        }
+        .main{
+            display: flex;
+            place-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h1{
+            font-size: 50px;
+            color: green;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+        }
+        #name{
+            font-size: 30px;
+            color: orangered;
+        }
+        .details{
+            font-size: 20px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Animal</h1>
+        <img src="../img/lion.jpg" >
+        <p id="name">Lion</p>
+        <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quidem ab veniam provident totam suscipit laboriosam dolorum itaque enim placeat cupiditate, accusantium distinctio est sunt!</div>
+    </div>
+
+    <script>
+        console.log(document.querySelector('.main h1').innerHTML);
+        console.log(document.querySelector('.main #name').innerHTML);
+        console.log(document.querySelector('div div').innerHTML);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace And Match</title>
+</head>
+<body>
+    <div id="rep">Ncit college is located in Balkumari.</div>
+    <button onclick="change()">Change</button>
+    <script>
+        function change(){
+            let text=document.getElementById("rep").innerHTML;
+            // document.getElementById("rep").innerHTML=text.replace("Ncit","Hsm");
+            
+            text2=document.getElementById("rep").innerHTML=text.replace("Ncit","Hsm");
+            document.getElementById("rep").innerHTML=text2.replace("Balkumari","Hetauda");
+        }
+    </script>
+</body>
+</html>

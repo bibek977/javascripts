@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and Select Events 2</title>
+</head>
+<body>
+    <div class="form">
+        <label for="name">Name : </label>
+        <br>
+        <input type="text" id="name">
+        <br>
+
+        <label for="program">Select the programming language</label>
+        <!-- the onchange part is removed -->
+        <select name="programming-languge" id="program"> 
+            <option value="">Select Any one</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Others">Others</option>
+        </select>
+
+        <br>
+        <button id="save">Save</button>
+    </div>
+
+    <div id="show"></div>
+
+    <script>
+        const showResult = document.getElementById('save');
+
+        // showResult.addEventListener('click',()=>{
+        //     const givenName = document.getElementById('name').value;
+        //     console.log(givenName);
+        //     const givenProgram = document.getElementById('program').value;
+        //     console.log(givenProgram);
+
+        //     document.getElementById('show').innerHTML = `The name is : ${givenName} <br> program is : ${givenProgram}`
+        // })
+
+        // defect of this is you can not this same method multiple times for more check eventsTypes.html 
+        showResult.onclick = () => {
+            const givenName = document.getElementById('name').value;
+            console.log(givenName);
+            const givenProgram = document.getElementById('program').value;
+            console.log(givenProgram);
+
+            document.getElementById('show').innerHTML = `The name is : ${givenName} <br> program is : ${givenProgram}`
+        }
+    </script>
+</body>
+</html>

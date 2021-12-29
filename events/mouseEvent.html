@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+
+    <style>
+        #circle{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border-radius: 50%;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* border-radius: 50%; */
+        }
+    </style>
+
+</head>
+<body>
+    <div id="circle" onmouseup="mouseUp()" onmousedown="mouseDown()"></div>
+
+    <div id="box"></div>
+
+    <script>
+        function mouseUp() {
+            document.getElementById("circle").style.backgroundColor="blue";
+            // console.log("mouse is up");
+        }
+        function mouseDown() {
+            document.getElementById("circle").style.backgroundColor="red";
+            // console.log("mouse is down");
+        }
+
+        // Another Way
+        const mouseEvent = document.getElementById("box");
+
+        // In this method we dont have to use on before the onmouseenter or onclick
+        mouseEvent.addEventListener('mouseenter',()=>{
+            mouseEvent.style.background="yellow";
+            console.log("mouse is entered")
+        })
+        mouseEvent.addEventListener('mouseleave',()=>{
+            mouseEvent.style.background="maroon";
+            console.log("mouse is leave")
+        })
+
+        // mouseEvent.onmouseenter = () => {
+        //     console.log("mouse is enter");
+        // }
+        // mouseEvent.onmouseleave = () => {
+        //     console.log("mouse is leave");
+        // }
+
+    </script>
+</body>
+</html>

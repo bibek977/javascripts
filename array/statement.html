@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement </title>
+</head>
+<body>
+    <p>The sum of 2 number</p>
+    <p id="sum"></p>
+
+    <p class="five">5</p>
+    <p class="six">6</p>
+    <p class="result1"></p>
+    <p class="result2"></p>
+
+    <script>
+        // var x ,y ,z;
+
+        let x,y,z;
+        x=5;
+        y=8;
+        z=x+y;
+        document.getElementById('sum').innerHTML='the sum of 5 and 8 is ' + z;
+
+        let five = document.querySelector('.five').innerHTML;
+        let six = document.querySelector('.six').innerHTML;
+        document.querySelector('.result1').innerHTML=five + six
+        // it gives 5 + 6 == 56
+        
+        five=parseInt(five);
+        six = parseInt(six);
+        document.querySelector('.result2').innerHTML=five + six
+        // it gives 5 + 6 == 11
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array in js</title>
+</head>
+<body>
+    <p id="array"></p>
+
+    <p id="object"></p>
+
+    <div id="newObj1"></div>
+    
+    <div id="newObj2"></div>
+
+    <script>
+        let cars=["Maruti","Tesla","Tata"];
+        document.getElementById('array').innerHTML= cars[1];
+        
+        var bibek={
+            name:"Bibek",
+            age:25
+        };
+        // document.getElementById('object').innerHTML=bibek.name + " is " + "<br>" + bibek.age +" years old";
+
+        document.getElementById('object').innerHTML=bibek.name + "<h1> is </h1> " + "<br>" + bibek.age +" years old";
+
+        document.getElementById('newObj1').innerHTML=
+        bibek["name"] + " " + bibek["age"];
+
+        // bibek.name="Bhattarai";
+
+        bibek["name"]="Bhattarai";
+
+        document.getElementById('newObj2').innerHTML=
+        bibek["name"] + " " + bibek["age"];
+
+        console.log(cars)
+        console.log(bibek)
+    </script>
+</body>
+</html>

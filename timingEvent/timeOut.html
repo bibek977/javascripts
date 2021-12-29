@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut Event</title>
+</head>
+<body>
+    <p>Guess My name ...???</p>
+    <h1 id="myName"></h1>
+
+    <button id="showName">Show</button>
+
+    <button onclick="clearTimeout(givenName)">Cancel Name</button>
+    <p>It works as you have to cancel before its timing</p>
+
+    <script>
+        
+        const showResult = () => {
+            // loading shows because of click function is active in this
+            document.getElementById('myName').innerHTML= "Loading...";
+            
+            // settimeout( function , time delay in milliseconds)
+            setTimeout( ()=>{
+                document.getElementById('myName').innerHTML= "Bibek Bhattarai";
+            },3000)
+            
+        }
+        
+        const givenName=document.querySelector('#showName');
+        givenName.addEventListener('click',showResult);
+
+    </script>
+</body>
+</html>

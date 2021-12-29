@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+<body>
+    <input type="text" id="keyId">
+    <br>
+    <p id="show"></p>
+
+    <script>
+        const keyEvent = document.getElementById('keyId');
+
+        // keyEvent.onkeypress = () => {
+        //     document.getElementById('show').innerHTML=`The pressed key is ${event.key} and code id ${event.code}`;
+        //     console.log(`The pressed key is ${event.key} and code id ${event.code}`)
+        // }
+
+        keyEvent.onkeydown = () => {
+            document.getElementById('show').innerHTML="The key is pressed Down";
+            console.log(`key is down and the key = ${event.key}`)
+        }
+
+        keyEvent.onkeyup = () => {
+            document.getElementById('show').innerHTML="The key is pressed UP";
+        }
+    </script>
+</body>
+</html>

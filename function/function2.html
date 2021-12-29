@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with arguement</title>
+</head>
+<body>
+    <div>Pesonal Information
+        <p>
+            <button onclick="person('Bibek',25)">Show details</button>
+            <button onclick="person('Anushil',24)">Show details</button>
+        </p>
+    </div>
+    <p id="hello"></p>
+
+
+    <button onclick="add(5,10)">5 + 10</button>
+    <button onclick="add(5,15)">5 + 15</button>
+    <button onclick="add(15,30)">15 + 30</button>
+    <button onclick="add(25,15)">25 + 15</button>
+
+    <p id="result"></p>
+
+    <script>
+        function person(name,age){
+        document.getElementById('hello').innerHTML=
+        "Name :" + name + "<br>" + "Age :" + age;
+        }
+
+
+        function add(n,m) {
+            document.getElementById('result').innerHTML=n+m
+        }
+    </script>
+</body>
+</html>

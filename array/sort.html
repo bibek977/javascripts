@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace And Match</title>
+</head>
+<body>
+    <div>Ncit college is located in Balkuamri.</div>
+    <button onclick="change()">Change</button>
+   <p id="fruits"></p>
+
+   <script>
+       const fruit=["apple","orange","grapes","lemon"]
+       document.getElementById('fruits').innerHTML=fruit;
+
+       function change() {
+           document.getElementById('fruits').innerHTML=fruit.sort();
+       }
+   </script>
+</body>
+</html>

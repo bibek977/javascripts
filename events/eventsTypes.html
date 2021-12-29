@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different types of events</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- inline events -->
+    <a href="#" onclick="alert('Hello Mr. Bibek Bhattarai')">Inline Event</a>
+
+    <!-- By Calling a Function -->
+    <button onclick="callingFunction()">Call Function</button>
+
+    <!-- call By id -->
+    <p id="callId">Call By Id</p>
+
+    <!-- Event Listener -->
+    <div id="box"></div>
+    
+    <script>
+        // 2nd event way
+        function callingFunction() {
+            alert("Welcome to the Page");
+        }
+        
+        // 3rd event way
+        const callByID = document.getElementById('callId');
+              
+        callByID.onclick = () => {
+            alert("Good to see you");
+            alert("Good to see you too"); 
+            console.log("Good to see you"); 
+        }
+
+        // we can not use multiple as itoverwrites first method
+        // callByID.onclick = function(){
+        //         alert("Good to see you in another funtion")
+        //     }
+
+
+        // 4th event way
+        const eventListening = document.getElementById('box');
+        
+        eventListening.addEventListener('click', () => {
+            alert("This is eventListener");
+        })
+        
+        // We can use same event can call multiple time
+        const bibekFunction = ()=> {
+            alert("this is another eventlistener as 2")
+        }
+        eventListening.addEventListener('click', bibekFunction)
+
+    </script>
+</body>
+</html>
